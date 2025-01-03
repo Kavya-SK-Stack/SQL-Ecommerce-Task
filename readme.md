@@ -1,27 +1,24 @@
 ### Create database
-CREATE DATABASE ecommerce;
+    CREATE DATABASE ecommerce;
 
 ### Use database
- USE ecommerce;
+    USE ecommerce;
  
  ### Create Customers Table
 
-create table customers (id int auto_increment primary key, name varchar(30), email varchar(30), address varchar(30));
-
+    create table customers (id int auto_increment primary key, name varchar(30), email varchar(30), address varchar(30));
+    
 ![alt text](/Screenshot%202025-01-03%20110718.png)
 
 ### Create Orders Table
 
- create table orders (id int auto_increment primary key, customer_id int, order
-_date date, total_amount decimal (10, 2), foreign key (customer_id) references custom
-ers(id));
-
+    create table orders (id int auto_increment primary key, customer_id int, order_date date,total_amount decimal (10, 2), foreign key (customer_id) references customers(id));
+   
 ![alt text](/Screenshot%202025-01-03%20112404.png) 
 
 ### Create Products Table
- create table products (id int auto_increment primary key, name varchar(30), pr
-ice decimal (10, 2), description text);
-
+    create table products (id int auto_increment primary key, name varchar(30), price decimal (10, 2), description text);
+   
 ![alt text](/Screenshot%202025-01-03%20112432.png) 
 
 ### Insert Cutomers Table data
